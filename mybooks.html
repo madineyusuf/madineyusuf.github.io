@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programcılar için kitaplar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace; 
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        /* Arka plandaki video stili */
+        .background-video {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+        h1 {
+            font-size: 2.5em; 
+            color: #222; 
+            text-align: center; 
+            font-weight: bold;
+            position: relative;
+            z-index: 1; 
+            margin-top: 100px; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 10px;
+            border-radius: 10px;
+        }
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #222019; 
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; 
+            width: 100%; 
+            z-index: 1000; 
+        }
+
+        /* Menü öğelerinin düzeni */
+        
+        nav ul li {
+            display: inline-block; 
+            margin-right: 20px; 
+        }
+
+        nav ul li a {
+            color: rgb(249, 249, 249); 
+            text-decoration: none; 
+        }
+       
+        /* Kitaplar için konteyner stili */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Her bir kitap için stil */
+        .book {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .book h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .book p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* İçerik konteyneri */
+        .content-container {
+            display: flex; 
+            align-items: flex-start; 
+            justify-content: center; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            margin-top: 70px; 
+            max-width: 1000px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        /* Metin içeriği stili */
+        .text-content {
+            text-align: left; 
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: 2.5em; 
+            color: #222; 
+            text-align: center; 
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1.6; 
+            margin: 10px 0; 
+        }
+
+        /* Altbilgi stili */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3f5844; 
+            color: white;
+            margin-top: auto; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Arka plandaki video -->
+    <video class="background-video" autoplay loop muted>
+        <source src="images/green1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navigasyon menüsü -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="mybooks.html">Kitaplar</a></li>
+            <li><a href="myresources.html">Kaynaklar</a></li>
+            <li><a href="myadvice.html">Tavsiyeler</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sayfanın başlık kısmı -->
+    <header>
+        <h1>Önerdiğim Kitaplar</h1>
+    </header>
+
+    <!-- Kitapların listelendiği konteyner -->
+    <div class="container">
+        <!-- Kitap 1 -->
+        <div class="book">
+            <img src="images/book1.jpg" alt="Книга 1">
+            <h3>C How To Program</h3>
+            <p> Her konu, iyi bir şekilde ve bolca örnekle anlatılmış. Hem teoriyi öğreniyor hem de pratik yaparak gerçek dünyada kullanabileceğiniz beceriler kazanıyorsunuz. Zamanınızı buna mutlaka ayırın! </p>
+        </div>
+
+        <!-- Kitap 2 -->
+        <div class="book">
+            <img src="images/book2.jpg" alt="Книга 2">
+            <h3>Bilgisayar Bilimine Giriş</h3>
+            <p> Bu gerçekten harika bir giriş kitabı! Bilgisayar Bilimi'nin her ana konusuna değiniyor. Hangi konuyu seçerseniz seçin, kafanızda net bir şeyler oluşmaya başlayacak. </p>
+        </div>
+
+        <!-- Kitap 3 -->
+        <div class="book">
+            <img src="images/book3.jpg" alt="Книга 3">
+            <h3>Grokking Algorithms </h3>
+            <p>Ben kendim bundan başladım. Zor konuları basit bir dille anlatıyor; Görsel ve tablolarla dolu; Kod örnekleri ve bunların detaylı açıklamaları içerir. Algoritmalar dünyasına giriş yapmak isteyenler için kesinlikle tavsiye ederim!</p>
+        </div>
+    </div>
+
+    <!-- Altbilgi kısmı -->
+    <footer>
+        <p>&copy; MY Space - @madineyusuf - 2024 </p> 
+    </footer>
+</body>
+</html>
+
